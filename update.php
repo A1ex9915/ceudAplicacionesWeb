@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Empleado</title>
+</head>
+<body>
+    <h1>Actualizar Empleado</h1>
+    <form method="post" action="">
+        Curp: <input type="text" name="curp" value="<?php echo $curp; ?>" required><br>
+        <input type="submit" name="buscar" value="Buscar">
+    </form>
+    <?php if ($nombre != ""): ?>
+    <form method="post" action="">
+        <input type="hidden" name="curp" value="<?php echo $curp; ?>">
+        Nombre: <input type="text" name="nombre" value="<?php echo $nombre; ?>" required><br>
+        Apellido Paterno: <input type="text" name="ap_pat" value="<?php echo $ap_pat; ?>" required><br>
+        Apellido Materno: <input type="text" name="ap_mat" value="<?php echo $ap_mat; ?>" required><br>
+        Fecha de Nacimiento: <input type="date" name="fecha_nac" value="<?php echo $fecha_nac; ?>" required><br>
+        Escolaridad: <input type="text" name="escolaridad" value="<?php echo $escolaridad; ?>" required><br>
+        Domicilio: <input type="text" name="domicilio" value="<?php echo $domicilio; ?>" required><br>
+        <input type="submit" name="actualizar" value="Actualizar">
+    </form>
+    <?php endif; ?>
+</body>
+</html>
+
+
 <?php
 $servername = "	sql110.infinityfree.com";
 $username = "if0_37106801";
@@ -59,29 +87,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Actualizar Empleado</title>
-</head>
-<body>
-    <h1>Actualizar Empleado</h1>
-    <form method="post" action="">
-        Curp: <input type="text" name="curp" value="<?php echo $curp; ?>" required><br>
-        <input type="submit" name="buscar" value="Buscar">
-    </form>
-    <?php if ($nombre != ""): ?>
-    <form method="post" action="">
-        <input type="hidden" name="curp" value="<?php echo $curp; ?>">
-        Nombre: <input type="text" name="nombre" value="<?php echo $nombre; ?>" required><br>
-        Apellido Paterno: <input type="text" name="ap_pat" value="<?php echo $ap_pat; ?>" required><br>
-        Apellido Materno: <input type="text" name="ap_mat" value="<?php echo $ap_mat; ?>" required><br>
-        Fecha de Nacimiento: <input type="date" name="fecha_nac" value="<?php echo $fecha_nac; ?>" required><br>
-        Escolaridad: <input type="text" name="escolaridad" value="<?php echo $escolaridad; ?>" required><br>
-        Domicilio: <input type="text" name="domicilio" value="<?php echo $domicilio; ?>" required><br>
-        <input type="submit" name="actualizar" value="Actualizar">
-    </form>
-    <?php endif; ?>
-</body>
-</html>
+
